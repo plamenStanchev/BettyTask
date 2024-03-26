@@ -3,7 +3,7 @@ using BettyTask.Helpers;
 
 namespace BettyTask.Handlers;
 
-internal class WithdrawCommandHandler : ICommandHandler
+public class WithdrawCommandHandler : ICommandHandler
 {
     private readonly IWallet wallet;
     private readonly OutputCommandHandler outputHandler;
