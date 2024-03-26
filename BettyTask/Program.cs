@@ -33,9 +33,9 @@ public class Program
         outputCommandHandler.OutputMessage(GameMessages.GoAwayMessage);
     }
 
-    private void ProcessCommand(string command)// Imagine this is a speared class 
+    private void ProcessCommand(string command)// Imagine this is a speared class for
     {
-        var betCommand = new BetCommandHandler(wallet, game, outputCommandHandler); // and this is its DI stuff
+        var betCommand = new BetCommandHandler(wallet, game, outputCommandHandler); // and this is abstracted behind a mediator
         var withdrawCommand = new WithdrawCommandHandler(wallet, outputCommandHandler);
         var depositCommand = new DepositCommandHandler(wallet, outputCommandHandler);// because i feel strange doing so much abstraction for such a little task :)
 
